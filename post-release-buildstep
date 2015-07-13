@@ -7,9 +7,9 @@ cd "/app" &&
 new_path="\$(find / -name npm | tail -1 | xargs -I % sh -c "dirname %")" &&
 PATH="\$PATH:\$new_path" &&
 PATH="\$PATH:\$(npm bin)" &&
-npm install gulp &&
-npm install gulp-cli &&
-npm install bower &&
+gulp -v | grep Local || npm install gulp &&
+gulp -v | grep CLI || npm install gulp-cli &&
+bower -v || npm install bower &&
 bower --allow-root install &&
 gulp build
 EOF
