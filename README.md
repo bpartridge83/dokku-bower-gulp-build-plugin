@@ -9,7 +9,7 @@ This is mostly useful for single page apps that have an extra build step but you
 
 On your dokku server:
 ```sh
-git clone https://github.com/jagandecapri/dokku-bower-gulp-build-plugin.git /var/lib/dokku/plugins/dokku-bower-gulp-build
+git clone https://github.com/bpaprtridge83/dokku-bower-gulp-build-plugin.git /var/lib/dokku/plugins/dokku-bower-gulp-build
 ```
 
 All future deployments will run bower and gulp after a release.
