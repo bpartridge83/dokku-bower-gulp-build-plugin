@@ -9,7 +9,7 @@ PATH="\$PATH:\$new_path" &&
 PATH="\$PATH:\$(npm bin)" &&
 gulp -v | grep Local || npm install -g gulp &&
 gulp -v | grep CLI || npm install -g gulp-cli &&
-bower -v || npm install -g bower &&
+which bower || npm install -g bower &&
 bower --allow-root install &&
 gulp build
 EOF
